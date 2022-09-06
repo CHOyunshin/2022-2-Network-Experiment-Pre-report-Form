@@ -1,0 +1,94 @@
+%페이지 세팅
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
+\setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+
+
+\usepackage{import}
+
+\usepackage{setup}
+\linespread{1.2}                           %줄간격
+
+% 어느 면역학 도라이 블러거가 리뷰해준 줄간격과 header 설정관련 내용
+\usepackage{fancyhdr}
+%\usepackage{subcaption}
+
+\addtolength{\voffset}{-5mm}
+\addtolength{\textheight}{10mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{2016142096 \textbf{조윤신}}
+\lhead{Project 1 - rdt3.0 TCP/IP Client and Server}
+\cfoot{\thepage}
+\renewcommand\headrulewidth{0.3mm}
+\renewcommand\footrulewidth{0.0mm}
+\thispagestyle{plain}
+
+\begin{flushleft}
+\textsc{School of Electrical and Electronic of Enginnering} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\textsc{eee 4474-01. Experiments on Communication Networks}\\[0.1cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\small{\textsc{{2016142096 \textbf{조윤신}}}}\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-25mm}
+\includegraphics[height=3cm]{image/1.jpg}
+\vspace{5mm}
+\end{flushright}
+ 
+\begin{center}\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 제목 작성 [2]
+\textbf{\huge Pre Report 01}\\ [0.1cm] 
+{\large rdt3.0 TCP/IP Client and Server}\\           
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{center}
+\vspace{-5mm}
+\rule{\linewidth}{0.3mm}
+\vspace{-3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 실험 목표 작성[3]
+    \begin{mdframed}[
+    backgroundcolor = gray!20 
+    ] 
+    \vspace{-5mm}
+    \begin{center}
+        \subsubsection*{Project0의 rdt 1.0 TCP/IP 기반으로 reliable data transmission을 위한 기능을 더한
+                        rdt 3.0 TCP/IP를 구현}
+            \vspace{-2mm}
+            \begin{itemize}
+                \item {\small 
+                channel 에 의한 packet loss를 고려하여, 이를 극복하는 reliable data transmission 기능을 고안해 본다.
+                }
+                \vspace{-3mm}
+                \item  {\small 
+                Stop and Wait 프로토콜 기반으로 구현
+                }
+            \end{itemize}
+        \end{center}
+    \end{mdframed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 작성 시작 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\import{./section}{1}
+\import{./section}{2}
+\import{./section}{3}
+\import{./section}{4}
+\import{./section}{5}
+
+
+\end{document}
