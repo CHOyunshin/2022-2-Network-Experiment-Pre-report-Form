@@ -1,5 +1,5 @@
 %페이지 세팅
-\documentclass[a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \textwidth 6.5in
@@ -7,88 +7,103 @@
 \oddsidemargin 0in
 \headheight 0in
 
-
-\usepackage{import}
-
-\usepackage{setup}
-\linespread{1.2}                           %줄간격
-
-% 어느 면역학 도라이 블러거가 리뷰해준 줄간격과 header 설정관련 내용
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lastpage}
 \usepackage{fancyhdr}
-%\usepackage{subcaption}
+\usepackage{accents}
+\usepackage{setup}
+\usepackage{import}
+\usepackage{fancyhdr}
+\usepackage{layouts}
+\addtolength{\voffset}{0mm}
+\addtolength{\textheight}{0mm}
 
-\addtolength{\voffset}{-5mm}
-\addtolength{\textheight}{10mm}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+% 여기서 변경하는 제목들을 설정해 준다. 
+%%
+%----------------- 예비레포트 주차 
+\newcommand{\numnum}{2}
+%-----------------단원명
+% \newcommand{\SUBJECTT}{}
+%-----------------문제번호들
+% \newcommand{\problemnuma}{1}
+% \newcommand{\problemnumb}{2}
+% \newcommand{\problemnumc}{3}
+% \newcommand{\problemnumd}{4}
+% \newcommand{\problemnume}{5}
+% \newcommand{\problemnumf}{6}
+% \newcommand{\problemnumg}{7}
+% \newcommand{\problemnumh}{8}
+% \newcommand{\problemnumi}{9}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{problem}[2][Problem]  
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
 \begin{document}
-
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{2016142096 \textbf{조윤신}}
-\lhead{Project 1 - rdt3.0 TCP/IP Client and Server}
+    \rhead{2016142096 \textbf{조윤신}}
+    \lhead{Pre Report \numnum}
 \cfoot{\thepage}
 \renewcommand\headrulewidth{0.3mm}
-\renewcommand\footrulewidth{0.0mm}
+%\renewcommand\footrulewidth{0.3mm}
 \thispagestyle{plain}
 
 \begin{flushleft}
 \textsc{School of Electrical and Electronic of Enginnering} \\
+\textsc{eee 4474-01 : Experiments on Communication Networks }\\[0.1cm]
+\small{\textsc{2016142096 {\textbf{조윤신}}}}\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\textsc{eee 4474-01. Experiments on Communication Networks}\\[0.1cm]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\small{\textsc{{2016142096 \textbf{조윤신}}}}\\
 \end{flushleft}
-
 \begin{flushright}\vspace{-25mm}
-\includegraphics[height=3cm]{image/1.jpg}
-\vspace{5mm}
+    \includegraphics[height=3cm]{image/1.jpg}
+    \vspace{5mm}
 \end{flushright}
- 
-\begin{center}\vspace{-1.5cm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 제목 작성 [2]
-\textbf{\huge Pre Report 01}\\ [0.1cm] 
-{\large notebook form selection}\\           
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{center}
+    \begin{center}\vspace{-1.5cm}
+        \textbf{\huge  Pre Report Week\numnum}\\ 
+        \vspace{0.6mm}
+        {\large TCP, UDP protocols}\\           
+    \end{center}
+    
 \vspace{-5mm}
-\rule{\linewidth}{0.3mm}
-\vspace{-3mm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 실험 목표 작성[3]
-    \begin{mdframed}[
-    backgroundcolor = gray!20 
-    ] 
-    \vspace{-5mm}
-    \begin{center}
-        \subsubsection*{Project0의 rdt 1.0 TCP/IP 기반으로 reliable data transmission을 위한 기능을 더한
-                        rdt 3.0 TCP/IP를 구현}
-            \vspace{-2mm}
-            \begin{itemize}
-                \item {\small 
-                channel 에 의한 packet loss를 고려하여, 이를 극복하는 reliable data transmission 기능을 고안해 본다.
-                }
-                \vspace{-3mm}
-                \item  {\small 
-                Stop and Wait 프로토콜 기반으로 구현
-                }
-            \end{itemize}
-        \end{center}
-    \end{mdframed}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rule{\linewidth}{0.4mm}
 \vspace{-5mm}
+% main documents
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 작성 시작 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\import{./section}{1}
-\import{./section}{2}
-\import{./section}{3}
-\import{./section}{4}
-\import{./section}{5}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{./week02}{01_tcp}
+\newpage
+\import{./week02}{02_udp}
+\newpage
+\import{./week02}{03_ip}
 \end{document}
+
+
+% 사진을 첨부하는 포멧 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Bla Bla 1\\*
+%
+         \vspace{-4mm}
+        	\begin{figure}[!h]
+        		\centering
+        			\includegraphics[width=.4\textwidth]{image/2-2.png}
+        			\caption{Experiment 1 - top.v}
+        	\end{figure}
+        \vspace{-4mm}  
+%
+
+\vspace{-3mm}
+    Bla Bla 2 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
