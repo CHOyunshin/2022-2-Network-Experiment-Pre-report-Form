@@ -26,15 +26,16 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{indentfirst}
 \usepackage{hyperref}
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\renewcommand{\thesubsection}{\thesection\ - \arabic{subsection}}
 \linespread{1.15}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차 
-\newcommand{\numnum}{2}
+\newcommand{\numnum}{3}
 % 이번 실험의 부제목 
-\newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
+% \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
+\newcommand{\subtitle}{USPR(1) : Introduction, LABVIEW, Spectagram}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -92,7 +93,6 @@
                         % For Week 02 ~ 09.21
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \import{./TEX/week02}{01_01}
-\newpage
 \import{./TEX/week02}{02_01}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
