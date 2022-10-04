@@ -26,17 +26,40 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{indentfirst}
 \usepackage{hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sectioning Sytle Change
+\renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
+% \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+% Customize Section Style
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{Topic  \thesection\ : }
+% \newcommand\prefix@subsection{Experiment \thesubsection\ :\ }
+\makeatother
+
+
+
+
 \renewcommand{\thesubsection}{\thesection\ - \arabic{subsection}}
 \linespread{1.15}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차 
-\newcommand{\numnum}{4}
+\newcommand{\numnum}{5}
 % 이번 실험의 부제목 
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, LABVIEW, Spectagram}
-\newcommand{\subtitle}{USPR(2) : Radar generator tutorial}
+% \newcommand{\subtitle}{USPR(2) : Radar generator tutorial}
+\newcommand{\subtitle}{USPR(3) : MAC control, CNN protector}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -99,16 +122,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 03 ~ 09.28
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week03}{01_chirp}
-\import{./TEX/week03}{02_5g}
+% \import{./TEX/week03}{01_chirp}
+% \import{./TEX/week03}{02_5g}
 % \import{./TEX/week03}{03_}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 04 ~ 10.05
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week03}{01_}
-% \import{./TEX/week03}{02_}
-% \import{./TEX/week03}{03_}
+\import{./TEX/week04}{01}
+\import{./TEX/week04}{02}
+\clearpage
+\import{./TEX/week04}{03}
+\import{./TEX/week04}{04}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 05 ~ 10.12
