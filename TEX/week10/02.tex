@@ -1,0 +1,17 @@
+\section{cModule}
+cModule은 compound modules를 직접 정의하는데 사용된다.  네트워크 시뮬레이션을 위한 repacking의 function을 해주는 cSimpleModule을 submodule로 가지고 있으며, 이때 기능적 단위를 기준으로 모듈이라고 볼 수 있는 cComponents 를 cChannel과 cModule이 구성한다.
+\clearpage
+    \subsubsection*{\mintinline{c}{getParentModule()}}
+    이 module을 포함하는 module을 return한다. 만일 system module 일경우 null pointer를 return 한다. 즉, cComponent를 implement 함을 알 수 있다.
+\vspace{-2mm}    
+    \subsubsection*{\mintinline{c}{getSubmodule(const char* name,int index = -1)}}
+    subModule을 만들고 초기화한다. index가 있으면 subModule은 subModule vector의 elelment가 된다.
+    
+\section{cMessage}
+    OMNeT++의 메시지 클래스. CMessage Object는 시뮬레이션의 이벤트, 메세지 작업 등의 엔티티를 나타낸다.
+    메시지는 예약되거나(나중에 같은 모듈에 다시 도착하거나), 취소되거나, 게이트로 전송되거나, 다른 모듈로 직접 전송될 수 있다. \mintinline{c}{cMessage(const char *name=nullptr, short kind=0);}와 같이 name을 선언해주면 시뮬레이션에서 tracing debugging시 유용하게 사용된다. 뿐만아니라 메세지종류 우선순위 필터링 속성또한 포함한다.
+    \subsubsection*{\mintinline{c}{getSenderModule()}}
+    cModule에서 선언된 sender module에 대한 pointer를 return한다.
+\vspace{-2mm}
+    \subsubsection*{\mintinline{c}{getSenderModuleID()}}
+    모든 Message Object들은 고유한 ID를 가진다. 일반적으로 ID는 기록된 이벤트 로그 파일에서 메세지를 식별하는데 사용된다. 만약 메세지가 전송, 예정이 되지 않는다면 null, -1을 return 한다.

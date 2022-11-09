@@ -1,27 +1,32 @@
 \section{Socket Programming 에 필요한 함수와 모듈}
 Socket Programming 실험에서 사용하는 파이썬 모듈 및 함수는 다음과 같다.
+
 \subsection{Module}
-    \textbf{socket:} BSD socket 인터페이스에 대한 액세스를 제공 \\
-    \textbf{os:} 운영체제 종속 기능에 대한 다양한 함수 제공 \\
-    \textbf{sys:} 파이썬 인터프리터가 제공하는 변수와 함수를 직접 제어할 수 있게 해주는 모듈 \\
-    \textbf{time:} 운영체제가 제공하는 시간 정보를 다루는 함수를 제공 \\
-    \textbf{random:} 난수(random number)를 구할 수 있는 모듈로, 다양한 랜덤 관련 함수를 제공 \\
+\begin{description}
+    \item[socket] : BSD socket 인터페이스에 대한 액세스를 제공 \vspace{-1mm}
+    \item[os] : 운영체제 종속 기능에 대한 다양한 함수 제공 \vspace{-1mm}
+    \item[sys] : 파이썬 인터프리터가 제공하는 변수와 함수를 직접 제어할 수 있게 해주는 모듈 \vspace{-1mm}
+    \item[time] : 운영체제가 제공하는 시간 정보를 다루는 함수를 제공 \vspace{-1mm}
+    \item[random] : 난수(random number)를 구할 수 있는 모듈로, 다양한 랜덤 관련 함수를 제공 \vspace{-1mm}
+\end{description}
 \subsection{Function}
-    \textbf{socket:} 새로운 소켓을 생성한다. \\
-    \textbf{bind:} Server 측에서 쓰이며, IP 주소와 Port 번호를 설정한다. \\
-    \textbf{listen:} Server 측에서 쓰이며, TCP 소켓을 수신 대기 모드로 전환한다. \\
-    \textbf{accept:} Server가 Client의 TCP 연결 요청을 받아들인다. \\
-    \textbf{send:} TCP에서 데이터를 전송한다. \\
-    \textbf{recv:} TCP에서 데이터를 수신한다. \\
-    \textbf{sendto:} UDP에서 데이터를 전송한다. \\
-    \textbf{recvfrom:} UDP에서 데이터를 수신한다. \\
-    \textbf{close:} 소켓을 종료한다. \\
-    \textbf{connect:} Client 측에서 소켓에 Port 번호를 부여하고, TCP 연결을 시도한다. \\
-    \textbf{encode:} 문자열을 byte 코드로 변환한다. \\
-    \textbf{decode:} byte 코드를 문자열로 변환한다. \\
-    \textbf{input:} 사용자가 어떤 값을 입력하게 하고, 그 값을 변수에 저장한다. \\
-    \textbf{open:} 파일을 연다. 읽기모드(’r’), 쓰기모드(’w’), 추가모드(’a’)가 있다. \\
-    \textbf{getcwd:} 현재 작업 경로를 가져온다. \\
-    \textbf{write:} 파일에 문자열을 작성한다. \\
-    \textbf{read:} 파일에서 지정한 byte만큼 문자열을 읽는다. \\
+\begin{description}
+    \item[socket] : 새로운 소켓을 생성한다. \vspace{-1mm}
+    \item[bind] : Server 측에서 쓰이며, IP 주소와 Port 번호를 설정한다. \vspace{-1mm}
+    \item[listen] : Server 측에서 쓰이며, TCP 소켓을 수신 대기 모드로 전환한다. \vspace{-1mm}
+    \item[accept] : Server가 Client의 TCP 연결 요청을 받아들인다. \vspace{-1mm}
+    \item[send] : TCP에서 데이터를 전송한다. \vspace{-1mm}
+    \item[recv] : TCP에서 데이터를 수신한다. \vspace{-1mm}
+    \item[sendto] : UDP에서 데이터를 전송한다. \vspace{-1mm}
+    \item[recvfrom] : UDP에서 데이터를 수신한다. \vspace{-1mm}
+    \item[close] :소켓을 종료한다. \vspace{-1mm}
+    \item[connect] :Client 측에서 소켓에 Port 번호를 부여하고, TCP 연결을 시도한다. \vspace{-1mm}
+    \item[encode] :문자열을 byte 코드로 변환한다. \vspace{-1mm}
+    \item[decode] :byte 코드를 문자열로 변환한다. \vspace{-1mm}
+    \item[input] :사용자가 어떤 값을 입력하게 하고, 그 값을 변수에 저장한다. \vspace{-1mm}
+    \item[open] :파일을 연다. 읽기모드(’r’), 쓰기모드(’w’), 추가모드(’a’)가 있다. \vspace{-1mm}
+    \item[getcwd] :현재 작업 경로를 가져온다. \vspace{-1mm}
+    \item[write] :파일에 문자열을 작성한다. \vspace{-1mm}
+    \item[read] :파일에서 지정한 byte만큼 문자열을 읽는다. \vspace{-1mm}
+\end{description}
 \newpage

@@ -1,5 +1,5 @@
 %페이지 세팅
-\documentclass[10pt,a4paper]{article}
+\documentclass[9.5pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \textwidth 6.5in
@@ -44,17 +44,13 @@
 \newcommand\prefix@section{Topic  \thesection\ : }
 % \newcommand\prefix@subsection{Experiment \thesubsection\ :\ }
 \makeatother
-
-
-
-
 \renewcommand{\thesubsection}{\thesection\ - \arabic{subsection}}
 \linespread{1.15}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차 
-\newcommand{\numnum}{9}
+\newcommand{\numnum}{10}
 % 이번 실험의 부제목 
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, LABVIEW, Spectagram}
@@ -62,7 +58,7 @@
 % \newcommand{\subtitle}{USPR(3) : MAC control, CNN protector}
 % \newcommand{\subtitle}{Mininet(1) : SDN-based Switch and Hub}
 % \newcommand{\subtitle}{Mininet(2) : SDN-based Routing}
-\newcommand{\subtitle}{Socket Programming}
+\newcommand{\subtitle}{OMNet++ Simulation}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -158,11 +154,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 07 ~ 10.26
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week07}{01}
-\import{./TEX/week07}{02}
-
-% \import{./TEX/week03}{01_}
-% \import{./TEX/week03}{02_}
-% \import{./TEX/week03}{03_}
+% \import{./TEX/week07}{01}
+% \import{./TEX/week07}{02}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % For Week 07 ~ 10.26
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \import{./TEX/week07_2column}{01}
+% \import{./TEX/week07_2column}{02}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % For Week 10 ~ 11. 09
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{./TEX/week10}{01}
+\import{./TEX/week10}{02}
 %-------------------------------------------------------------------------
 \end{document}
