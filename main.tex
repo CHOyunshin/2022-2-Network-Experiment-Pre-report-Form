@@ -41,16 +41,16 @@
     \csname the#1\endcsname\quad
   \fi}
 % define \prefix@section
-\newcommand\prefix@section{Topic  \thesection\ : }
+\newcommand\prefix@section{\thesection. }
 % \newcommand\prefix@subsection{Experiment \thesubsection\ :\ }
 \makeatother
-\renewcommand{\thesubsection}{\thesection\ - \arabic{subsection}}
-\linespread{1.15}
+\renewcommand{\thesubsection}{\thesection. \arabic{subsection}}
+\linespread{1.2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차 
-\newcommand{\numnum}{11}
+\newcommand{\numnum}{12}
 % 이번 실험의 부제목 
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, LABVIEW, Spectagram}
@@ -66,6 +66,15 @@
 \newenvironment{problem}[2][Problem]  
     { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
     {  \end{mdframed}}
+%-------------------------------------------------------------------------
+%. --> multicols에서image를 사용하기 위해서 
+\newcommand\myfigure[1]{%
+\medskip\noindent
+\begin{minipage}{\columnwidth}
+\centering%
+%figure,caption, and label go here
+\end{minipage}\medskip}
+\setlength{\columnsep}{7mm}
 %-------------------------------------------------------------------------
 \begin{document}
 \pagestyle{fancy}
@@ -87,13 +96,13 @@
     \vspace{5mm}
 \end{flushright}
     \begin{center}\vspace{-1.5cm}
-        \textbf{\huge  Pre Report Week\numnum}\\ 
-        \vspace{0.6mm}
+        \textbf{\huge  Pre Report Week \numnum}\\ 
+        \vspace{2mm}
         {\large \subtitle}\\           
     \end{center}
 \vspace{-5mm}
 \rule{\linewidth}{0.4mm}
-\vspace{-5mm}
+\vspace{-8mm}
 % main documents
 % 모든 프로그래밍 편집기 (IDE)에서 원도우 기준으로 '컨트롤 + /'를 누르면 
 % 커서가 활성화된 line의 주석처리를 해제 지정할 수 있다. 
@@ -167,8 +176,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 10 ~ 11. 09
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week11}{01}
-\import{./TEX/week11}{02}
-\import{./TEX/week11}{03}
+% \import{./TEX/week11}{01}
+% \import{./TEX/week11}{02}
+% \import{./TEX/week11}{03}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % For Week 12 ~ 11. 23
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \import{./TEX/week12}{00}
+% \import{./TEX/week12}{01}
+% \import{./TEX/week12}{02}
+% \import{./TEX/week12}{03}
+% \import{./TEX/week12}{04}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                 % For Week 12 ~ 11. 23.  -> 2열 버전 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{TEX/week12_multi_ver/01}
 %-------------------------------------------------------------------------
 \end{document}
